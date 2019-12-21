@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ebikeConfigActivity">
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Weight（kg）"
+
+
+            android:id="@+id/weight" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"/>
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Velocity（km/hr）"
+
+
+            android:id="@+id/velocity" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@id/weight"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="friction（N）"
+
+
+            android:id="@+id/rollingfriction" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weight"
+            android:layout_marginTop="10dp"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="drag（N）"
+
+
+            android:id="@+id/airdrag" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@id/rollingfriction"
+            app:layout_constraintTop_toBottomOf="@id/weight"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power"
+
+
+            android:id="@+id/power" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rollingfriction"
+            android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/power"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:text="Calculate"/>
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Voltage"
+
+            android:id="@+id/voltage" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@id/rollingfriction"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            android:layout_marginTop="10dp"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Current"
+
+            android:id="@+id/current" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Real Power"
+
+
+            android:id="@+id/realpower" android:textSize="14sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"
+
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/voltage"
+            android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/realpowercalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/realpower"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:text="Calculate Real Power"/>
+
+
+
+
+    <Button
+            android:id="@+id/backToProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Back"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/loginimgleft"
+
+             tools:context=".FragmentProduct">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:text="Electric Bike Configuration" android:id="@+id/ebikeconfig"/>
+
+
+    <ImageView
+
+            android:id="@+id/productImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="60dp"
+
+
+            android:src="@drawable/largepack"/>
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14.4V-150Ah battery pack "
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="220dp"
+
+            android:id="@+id/largepackname"
+            android:textSize="14sp" tools:visibility="visible" android:background="?attr/actionModeBackground"
+            android:singleLine="false"/>
+
+
+    <Button
+        android:id="@+id/toTestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="20dp"
+
+        android:text="Test Page" />
+
+
+
+
+
+
+</FrameLayout>

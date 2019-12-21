@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/loginmiddle"
+    tools:context=".FragmentNetwork">
+
+
+
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="System ID" android:id="@+id/dataupdate"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="10dp"
+        android:text="Individual Cell Voltage"
+        android:id="@+id/disconnect"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="280dp"
+            android:text="Connection Status" android:id="@+id/statusupdate"/>
+
+
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="10dp"
+            android:text="Scan BLE" android:id="@+id/scandevice"/>
+
+
+
+
+    <ListView
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="200dp"
+
+        android:layout_marginTop="130dp"
+        android:id="@+id/listvoltagefirsteight"
+
+        android:background="@android:color/holo_green_light" />
+
+
+
+
+    <ListView
+
+
+        android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+
+
+              android:layout_marginLeft="200dp"
+              android:layout_marginRight="20dp"
+
+              android:layout_marginTop="130dp"
+              android:id="@+id/listvoltagesecondfour"
+
+              android:background="@android:color/holo_green_light" />
+
+
+
+
+
+
+
+</FrameLayout>

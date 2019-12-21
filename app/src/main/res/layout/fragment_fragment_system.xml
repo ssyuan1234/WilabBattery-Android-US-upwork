@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/loginimgright"
+
+             tools:context=".FragmentSystem">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+            android:text="Send Test Report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateinfo"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+
+            android:textSize="18sp"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="System Status"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/editText"
+            android:textSize="30sp"
+            android:background="?attr/actionBarItemBackground"
+            android:singleLine="false"/>
+
+
+
+    <TextView
+            android:text="Work Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="50dp"
+
+            android:id="@+id/status"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:text="----"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="260dp"
+
+
+            android:id="@+id/statusReport" tools:visibility="invisible" android:textSize="24sp"
+            android:visibility="visible" android:background="?attr/actionBarItemBackground"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="280dp"
+        android:text="Connection Status" android:id="@+id/statusupdate"/>
+
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOC（%）"
+
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="50dp"
+
+            android:id="@+id/textview" android:textSize="24sp"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:background="?attr/actionBarItemBackground"/>
+
+    <TextView
+            android:text="----"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="175dp"
+            android:layout_marginLeft="260dp"
+
+
+            android:id="@+id/batterysoc" tools:visibility="invisible" android:textSize="24sp" android:hint="电量"
+            android:visibility="visible" android:background="?attr/actionBarItemBackground"/>
+
+
+    <Button
+        android:id ="@+id/deviceConnect"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:layout_marginTop="250dp"
+        android:layout_gravity="center_horizontal"
+
+        android:text="Unlock"
+        android:textSize="10dp"
+        android:background="@drawable/round_button"
+        android:padding="40dp"
+        />
+
+    <Button
+        android:id ="@+id/lockup"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:layout_marginTop="400dp"
+        android:layout_gravity="center_horizontal"
+
+        android:text="Lock"
+        android:textSize="10dp"
+        android:background="@drawable/round_button_lockup"
+        android:padding="40dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</FrameLayout>
