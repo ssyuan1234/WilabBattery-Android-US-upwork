@@ -63,9 +63,9 @@
 
 
 
-    <string name="temperature_first_pack">温度 #1</string>
+     <string name="temperature_first_pack">温度 #1</string>
     <string name="temperature_second_pack">温度 #2</string>
-    <string name="temperature_third_pack">温度 #1</string>
+     <string name="temperature_third_pack">温度 #3</string>
 
     <string name="normal">正常</string>
 
@@ -143,19 +143,19 @@
 
 
 
-    <string name="temperature_first_pack">temp #1</string>
+     <string name="temperature_first_pack">temp #1</string>
     <string name="temperature_second_pack">temp #2</string>
-    <string name="temperature_third_pack">temp #1</string>
+     <string name="temperature_third_pack">temp #3</string>
 
     <string name="normal">normal</string>
 
-    <string name="communication_abnormal">comm break</string>
-    <string name="over_current">over curr</string>
-    <string name="over_temp">over temp</string>
-    <string name="over_charge">over charge</string>
-    <string name="over_discharge">over discharge</string>
-    <string name="charging">charging</string>
-    <string name="discharging">discharging</string>
+    <string name="communication_abnormal">commstop</string>
+              <string name="over_current">overcurr</string>
+                 <string name="over_temp">overtemp</string>
+               <string name="over_charge">overchar</string>
+            <string name="over_discharge">overdisc</string>
+                  <string name="charging">charging</string>
+               <string name="discharging">discharg</string>
 
     <string name="current_reading">Current</string>
 
