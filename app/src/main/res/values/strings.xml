@@ -1,12 +1,201 @@
 <resources>
     <string name="app_name">WilabBattery</string>
-    <string name="title_system">System</string>
-    <string name="title_network">Network</string>
-    <string name="title_product">Product</string>
-    <string name="title_contact">Contact</string>
+    <string name="fragment_title_system">System</string>
+    <string name="fragment_title_network">Network</string>
+    <string name="fragment_title_product">Product</string>
+    <string name="fragment_title_contact">Contact</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_ebike_config">EbikeConfigActivity</string>
     <string name="title_activity_test_page">TestPageActivity</string>
+
+
+
+    <string name="scanButtonText">Scan BLE device (wait for 10s）</string>
+
+     <!-- String in Chinese version
+
+       <string name="send_report_button">发送报告</string>
+       <string name="connection_status">链接状态</string>
+       <string name="system_status">系统状态</string>
+       <string name="alarm_status">报警状态</string>
+       <string name="soc_percent">剩余电量</string>
+       <string name="lock">锁定</string>
+       <string name="unlock">解锁</string>
+
+       <string name="ebike_config">电动车配置</string>
+       <string name="large_pack_name">12V-150Ah-电池包</string>
+       <string name="test_page">测试页</string>
+
+    <string name="main_board_cpu_id">系统序列号</string>
+    <string name="scan_bluetooth_device">扫描蓝牙</string>
+    <string name="connection_status_Network_page">链接状态</string>
+    <string name="individual_cell_data">单体电池数据</string>
+
+    <string name="connection_status_device_found">找到蓝牙</string>
+    <string name="connection_status_connection_ongoing">链接中</string>
+    <string name="connection_status_search_again">重按搜索键</string>
+    <string name="connection_status_reading_data">读取数据</string>
+
+
+    <string name="scan_ble_scanpage">Scan BLE device (wait for 10s）搜索蓝牙器件（请等10秒）</string>
+
+    <string name="weight">重量（公斤</string>
+    <string name="velocity">速度（公里/小时</string>
+    <string name="friction">地面摩擦力（牛顿）</string>
+    <string name="drag">空气摩擦力（牛顿）</string>
+
+    <string name="power">功率（瓦）</string>
+    <string name="calculate">计算</string>
+    <string name="current">电流（安）</string>
+    <string name="voltage">电压（伏）</string>
+    <string name="real_power">实际功率（瓦）</string>
+    <string name="calculate_real_power">计算实际功率</string>
+
+    <string name="mcu_ID">芯片序号</string>
+    <string name="instruction_string">指令字符串</string>
+    <string name="send_instruction">发送指令</string>
+
+    <string name="alarm_bluetooth_permission">申请蓝牙使用许可</string>
+    <string name="cancel_button">取消</string>
+    <string name="back_button">返回</string>
+
+
+
+    <string name="temperature_first_pack">温度 #1</string>
+    <string name="temperature_second_pack">温度 #2</string>
+    <string name="temperature_third_pack">温度 #1</string>
+
+    <string name="normal">正常</string>
+
+    <string name="communication_abnormal">通信异常</string>
+              <string name="over_current">过流信号</string>
+                 <string name="over_temp">过温信号</string>
+               <string name="over_charge">过充信号</string>
+            <string name="over_discharge">过放信号</string>
+                  <string name="charging">正在充电</string>
+               <string name="discharging">正在放电</string>
+
+    <string name="current_reading">电流读数</string>
+
+    <string name="no_connection">没有链接</string>
+
+    <string name="no_ble_connection_warning">没有预存的蓝牙器件信息，请按网络页搜索蓝牙器件</string>
+
+    <string name="email_for_battery_data">cloud@wilabenergy.cn</string>
+
+
+
+       -->
+
+    <!-- English verion -->
+    <!-- String used in FragmentSystem -->
+
+     <string name="send_report_button">Send Report</string>
+     <string name="connection_status">Conn. Status</string>
+     <string name="system_status">System Status</string>
+     <string name="alarm_status">Alarm Status</string>
+     <string name="soc_percent">Power left</string>
+     <string name="lock">Lock</string>
+     <string name="unlock">Unlock</string>
+
+    <!-- String used in FragmentProduct -->
+    <string name="ebike_config">Ebike Configuration</string>
+    <string name="large_pack_name">12V-150Ah-Pack</string>
+    <string name="test_page">Test Page</string>
+
+    <!-- String used in FragmentNetwork -->
+    <string name="main_board_cpu_id">System ID</string>
+    <string name="scan_bluetooth_device">Scan Bluetooth</string>
+    <string name="connection_status_Network_page">Conn. Status</string>
+    <string name="individual_cell_data">Single Cell Voltage</string>
+
+    <string name="connection_status_device_found">Device Found</string>
+    <string name="connection_status_connection_ongoing">Connecting...</string>
+    <string name="connection_status_search_again">Press Search Again</string>
+    <string name="connection_status_reading_data">Reading Data</string>
+
+    <string name="scan_ble_scanpage">Scan BLE device (wait for 10s）</string>
+
+
+
+    <string name="weight">Weight(kg)</string>
+    <string name="velocity">Speed(km/hr)</string>
+    <string name="friction">Friction Force(N)</string>
+    <string name="drag">Drag Force(N)</string>
+
+    <string name="power">Power(W)</string>
+    <string name="calculate">Calculate</string>
+    <string name="current">Current(A)</string>
+    <string name="voltage">Voltage(V)</string>
+    <string name="real_power">Real Power(W)</string>
+    <string name="calculate_real_power">Calculate Real Power</string>
+
+    <string name="mcu_ID">MCU ID</string>
+    <string name="instruction_string">Instruction String</string>
+    <string name="send_instruction">Send Instruction</string>
+
+    <string name="alarm_bluetooth_permission">Send Instruction</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="back_button">Back</string>
+
+
+
+
+    <string name="temperature_first_pack">temp #1</string>
+    <string name="temperature_second_pack">temp #2</string>
+    <string name="temperature_third_pack">temp #1</string>
+
+    <string name="normal">normal</string>
+
+    <string name="communication_abnormal">comm break</string>
+    <string name="over_current">over curr</string>
+    <string name="over_temp">over temp</string>
+    <string name="over_charge">over charge</string>
+    <string name="over_discharge">over discharge</string>
+    <string name="charging">charging</string>
+    <string name="discharging">discharging</string>
+
+    <string name="current_reading">Current</string>
+
+    <string name="no_connection">No connection</string>
+
+    <string name="no_ble_connection_warning">No pre-stored bluetooth device, search device on Network tab</string>
+
+    <string name="email_for_battery_data">cloud@wilabenergy.cn</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //String used in all other layout
+
+
+
+
+  //Chinese version
+
+
+
 </resources>

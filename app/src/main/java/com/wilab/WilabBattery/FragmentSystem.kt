@@ -35,25 +35,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import java.util.*
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-
-
-
 class FragmentSystem : Fragment() {
 
     companion object{
         fun newInstance(): FragmentSystem {
-
-      //      val args = Bundle()
-      //      val fragment = FragmentSystem()
-      //      val strtext = fragment.arguments!!.getString("edttext")
-
-
             return FragmentSystem()
         }
 
@@ -76,8 +61,6 @@ class FragmentSystem : Fragment() {
     val uuid_service_wilab_device = "0000fff0-0000-1000-8000-00805f9b34fb"
     val uuid_characteristic_wilab_device = "0000fff1-0000-1000-8000-00805f9b34fb"
     val uuid_write_characteristic_wilab_device = "0000fff2-0000-1000-8000-00805f9b34fb"
-
-    //
 
 
     private lateinit var statusUpdate: TextView
@@ -135,21 +118,10 @@ class FragmentSystem : Fragment() {
 
                 batterysoc.text = voltageList[5]
 
-                statusReport.text = "正常"
-
-                //           if ((errorCode[5] == 0) and (errorCode[6] == 1)) {statusReport.text = "放电"}
-      //          if ((errorCode[5] == 1) and (errorCode[6] == 0)) {statusReport.text = "充电"}
-      //          if ((errorCode[5] == 0) and (errorCode[6] == 0)) {statusReport.text = "关闭"}
-
-       //       if (errorCode[0] == 1) {statusUpdate.text = "通讯异常"}
-       //         if (errorCode[1] == 1) {statusReport.text = "过流"}
-       //         if (errorCode[2] == 1) {statusReport.text = "过温"}
-                if (errorCode[3] == 1) {statusReport.text = "overcharge"}
-       //         if (errorCode[4] == 1) {statusReport.text = "过放"}
+                statusReport.text = resources.getString(R.string.normal)
 
 
-
-
+                if (errorCode[3] == 1) {statusReport.text = resources.getString(R.string.over_charge)}
 
                 //this file path has to be defined in handle message section. Otherwise, program crash
                 val filePath = context!!.getFilesDir().path.toString() + "/fileName.txt"
@@ -183,25 +155,25 @@ class FragmentSystem : Fragment() {
 
             if (inputMessage.what == 2) {
 
-                statusUpdate.text = "find device"
+                statusUpdate.text = resources.getString(R.string.connection_status_device_found)
 
             }
 
             if (inputMessage.what == 3) {
 
-                statusUpdate.text = "connecting"
+                statusUpdate.text = resources.getString(R.string.connection_status_connection_ongoing)
 
             }
 
             if (inputMessage.what == 4) {
 
-                statusUpdate.text = "search failed, search again"
+                statusUpdate.text = resources.getString(R.string.connection_status_search_again)
 
             }
 
             if (inputMessage.what == 5) {
 
-                statusUpdate.text = "connected"
+                statusUpdate.text = resources.getString(R.string.connection_status_reading_data)
 
             }
 
@@ -229,8 +201,6 @@ class FragmentSystem : Fragment() {
         //this <Button> line sometimes give strange error message without crashing the program
         val updateinfo = rootView.findViewById<Button>(R.id.updateinfo)
         val deviceConnect = rootView.findViewById<Button>(R.id.deviceConnect)
-        val batterysoc = rootView.findViewById<TextView>(R.id.batterysoc)
-        val statusReport = rootView.findViewById<TextView>(R.id.statusReport)
 
         statusUpdate = rootView.findViewById<TextView>(R.id.statusupdate)
 
@@ -271,7 +241,7 @@ class FragmentSystem : Fragment() {
 
         } else {
             displayRationale()
-            deviceConnect.text = "没连接"
+            deviceConnect.text = resources.getString(R.string.no_connection)
         }
 
         if (preStoredDeviceAddress != "") {
@@ -351,10 +321,10 @@ class FragmentSystem : Fragment() {
         updateinfo.setOnClickListener{
 
             //if the warning signal is sent out, the warning trumpet will be played.
-            if (1 == 2) {
+    //        if (1 == 2) {
     //            val mp = MediaPlayer.create(activity, R.raw.trumpet)
      //           mp.start ()
-            }
+    //        }
 
 
             //get input from EditTexts and save in variables
@@ -407,14 +377,14 @@ class FragmentSystem : Fragment() {
         private fun displayRationale() {
             AlertDialog.Builder(activity)
              //         .setMessage(getString(R.string.location_permission_disabled))
-                 .setMessage("No pre-stored bluetooth device, search device on Network tab")
+                 .setMessage(resources.getString(R.string.no_ble_connection_warning))
 
             //        .setPositiveButton(getString(R.string.ok)
                  .setPositiveButton("OK")
 
                 { _, _ ->  }
 
-                 .setNegativeButton("cancel")
+                 .setNegativeButton(resources.getString(R.string.cancel_button))
                  { _, _ -> }
                  .show()
     }
@@ -506,14 +476,14 @@ class FragmentSystem : Fragment() {
         val filePath = context!!.getFilesDir().path.toString() + "/fileName.txt"
         val file = File(filePath)
 
-        val uri = Uri.parse("file://$file")
+    //    val uri = Uri.parse("file://$file")
 
  //       val content = File(filePath).readText()
 
  //       println("file content is $content")
 
 
-        val contentUri = FileProvider.getUriForFile(this.context!!, "com.wilab.WilabBattery.fileprovider", file);
+        val contentUri = FileProvider.getUriForFile(this.context!!, "com.wilab.WilabBattery.fileprovider", file)
 
 
 
@@ -731,7 +701,7 @@ class FragmentSystem : Fragment() {
                 voltageListLeft[7] =  "#24,  " + ((data[18].toInt()*100 + data[19].toInt()).toFloat()/1000 + 0.00001).toString().take(5)
 
 
-                voltageList[4] = "电流,  "  + ((data[3].toInt()*100).toFloat()/100).toString()
+                voltageList[4] = resources.getString(R.string.current_reading) + ((data[3].toInt()*100).toFloat()/100).toString()
 
 
                 voltageList[5] = ((data[2].toInt()*100).toFloat()/100).toString() + "%"
@@ -764,10 +734,10 @@ class FragmentSystem : Fragment() {
                 voltageList[3] = "#34,  " + ((data[6].toInt()*100 + data[7].toInt()).toFloat()/1000 + 0.00001).toString().take(5)
 
 
-                voltageList[6] = "温度#1,  " + (((data[8].toInt()*100)-4000).toFloat()/100).toString()
+                voltageList[6] = resources.getString(R.string.temperature_first_pack) + (((data[8].toInt()*100)-4000).toFloat()/100).toString()
 
-                voltageList[7] = "温度#2,  " + (((data[8].toInt()*100)-4000).toFloat()/100).toString()
-                voltageList[8] = "温度#3,  " + (((data[8].toInt()*100)-4000).toFloat()/100).toString()
+                voltageList[7] = resources.getString(R.string.temperature_second_pack) + (((data[8].toInt()*100)-4000).toFloat()/100).toString()
+                voltageList[8] = resources.getString(R.string.temperature_third_pack) + (((data[8].toInt()*100)-4000).toFloat()/100).toString()
 
                 errorCode[0]  = (data[11].toInt() shr 7)  and 0x01        //convert error byte to int, read the first bit
                 errorCode[1]  = (data[11].toInt() shr 6)  and 0x01
@@ -779,13 +749,13 @@ class FragmentSystem : Fragment() {
                 errorCode[7]  = (data[11].toInt() shr 0)  and 0x01
 
 
-                voltageList[9] = "通讯异常   " + errorCode[0].toString()
-                voltageList[10] = "过流标志   " + errorCode[1].toString()
-                voltageList[11] = "过温标志   " + errorCode[2].toString()
-                voltageList[12] = "过充标志   " + errorCode[3].toString()
-                voltageList[13] = "过放标志   " + errorCode[4].toString()
-                voltageList[14] = "充电标志   " + errorCode[5].toString()
-                voltageList[15] = "放电标志   " + errorCode[6].toString()
+                voltageList[9] = resources.getString(R.string.communication_abnormal) + errorCode[0].toString()
+                voltageList[10] = resources.getString(R.string.over_current) + errorCode[1].toString()
+                voltageList[11] = resources.getString(R.string.over_temp) + errorCode[2].toString()
+                voltageList[12] = resources.getString(R.string.over_charge) + errorCode[3].toString()
+                voltageList[13] = resources.getString(R.string.over_discharge) + errorCode[4].toString()
+                voltageList[14] = resources.getString(R.string.charging) + errorCode[5].toString()
+                voltageList[15] = resources.getString(R.string.discharging) + errorCode[6].toString()
 
 
 

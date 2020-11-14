@@ -14,29 +14,39 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="System ID" android:id="@+id/dataupdate"/>
+    <Button
+        android:id="@+id/dataupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_board_cpu_id" />
 
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/disconnect"
+        android:layout_width="wrap_content"
 
-        android:layout_marginTop="65dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="Individual Cell Voltage"
-        android:id="@+id/disconnect"/>
+        android:layout_marginTop="65dp"
+        android:text="@string/individual_cell_data" />
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="280dp"
-            android:text="Connection Status" android:id="@+id/statusupdate"/>
+    <TextView
+        android:id="@+id/statusupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/connection_status_Network_page" />
 
 
-
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="10dp"
-            android:text="Scan BLE" android:id="@+id/scandevice"/>
+    <Button
+        android:id="@+id/scandevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/scan_bluetooth_device" />
 
 
 

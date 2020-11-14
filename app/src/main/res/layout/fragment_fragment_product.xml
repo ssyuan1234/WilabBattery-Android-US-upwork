@@ -9,10 +9,13 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="10dp"
-            android:text="Electric Bike Configuration" android:id="@+id/ebikeconfig"/>
+    <Button
+        android:id="@+id/ebikeconfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/ebike_config" />
 
 
     <ImageView
@@ -29,25 +32,27 @@
 
 
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="14.4V-150Ah battery pack "
-            android:layout_marginTop="130dp"
-            android:layout_marginLeft="220dp"
+        android:id="@+id/largepackname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="130dp"
 
-            android:id="@+id/largepackname"
-            android:textSize="14sp" tools:visibility="visible" android:background="?attr/actionModeBackground"
-            android:singleLine="false"/>
+        android:background="?attr/actionModeBackground"
+        android:singleLine="false"
+        android:text="@string/large_pack_name"
+        android:textSize="14sp"
+        tools:visibility="visible" />
 
 
     <Button
         android:id="@+id/toTestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="430dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="430dp"
 
-        android:text="Test Page" />
+        android:text="@string/test_page" />
 
 
 

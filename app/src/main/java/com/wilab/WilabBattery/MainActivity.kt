@@ -62,10 +62,10 @@ class MainActivity : AppCompatActivity() {
 
         //this approach will start all four fragments, but hide three of them.
 
-        fm.beginTransaction().add(R.id.fragmentholder, fragment44, "4").hide(fragment44).commit();
-        fm.beginTransaction().add(R.id.fragmentholder, fragment33, "3").hide(fragment33).commit();
-        fm.beginTransaction().add(R.id.fragmentholder, fragment11, "1").commit();
-        fm.beginTransaction().add(R.id.fragmentholder,fragment22, "2").hide(fragment22).commit();
+        fm.beginTransaction().add(R.id.fragmentholder, fragment44, "4").hide(fragment44).commit()
+        fm.beginTransaction().add(R.id.fragmentholder, fragment33, "3").hide(fragment33).commit()
+        fm.beginTransaction().add(R.id.fragmentholder, fragment11, "1").commit()
+        fm.beginTransaction().add(R.id.fragmentholder,fragment22, "2").hide(fragment22).commit()
 
 
         navView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -143,14 +143,14 @@ class MainActivity : AppCompatActivity() {
     private fun displayRationale() {
         AlertDialog.Builder(this)
             //         .setMessage(getString(R.string.location_permission_disabled))
-            .setMessage("使用蓝牙需位置授权")
+            .setMessage(resources.getString(R.string.alarm_bluetooth_permission))
 
             //        .setPositiveButton(getString(R.string.ok)
             .setPositiveButton("OK")
 
             { _, _ -> requestLocationPermission() }
 
-            .setNegativeButton("取消")
+            .setNegativeButton(resources.getString(R.string.cancel_button))
             { _, _ -> }
             .show()
     }

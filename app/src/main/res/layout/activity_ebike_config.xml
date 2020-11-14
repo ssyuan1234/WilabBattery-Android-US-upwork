@@ -9,169 +9,170 @@
 
 
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:hint="Weight（kg）"
+        android:id="@+id/weight"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
 
-            android:id="@+id/weight" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="50dp"/>
-
-
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:hint="Velocity（km/hr）"
-
-
-            android:id="@+id/velocity" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
-            android:layout_marginStart="20dp"
-            app:layout_constraintLeft_toRightOf="@id/weight"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="50dp"/>
-
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="friction（N）"
-
-
-            android:id="@+id/rollingfriction" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
-
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/weight"
-            android:layout_marginTop="10dp"/>
-
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="drag（N）"
-
-
-            android:id="@+id/airdrag" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
-
-            android:layout_marginStart="20dp"
-            app:layout_constraintLeft_toRightOf="@id/rollingfriction"
-            app:layout_constraintTop_toBottomOf="@id/weight"
-            android:layout_marginTop="10dp"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Power"
-
-
-            android:id="@+id/power" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
-
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rollingfriction"
-            android:layout_marginTop="10dp"/>
-
-    <Button
-            android:id="@+id/calculate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            app:layout_constraintTop_toBottomOf="@id/power"
-            android:layout_marginTop="10dp"
-
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-
-            android:text="Calculate"/>
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:background="?attr/actionBarItemBackground"
+        android:hint="@string/weight"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:hint="Voltage"
+        android:id="@+id/velocity"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            android:id="@+id/voltage" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
 
-            android:layout_marginStart="20dp"
-            app:layout_constraintLeft_toRightOf="@id/rollingfriction"
-            app:layout_constraintTop_toBottomOf="@id/calculate"
-            android:layout_marginTop="10dp"/>
+        android:layout_marginTop="50dp"
+        android:background="?attr/actionBarItemBackground"
+        android:hint="@string/velocity"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/weight"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:hint="Current"
-
-            android:id="@+id/current" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
-
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/calculate"
-            android:layout_marginTop="10dp"/>
 
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Real Power"
+        android:id="@+id/rollingfriction"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
 
 
-            android:id="@+id/realpower" android:textSize="14sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/actionBarItemBackground"
 
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/voltage"
-            android:layout_marginTop="10dp"/>
+        android:text="@string/friction"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+
+    <TextView
+        android:id="@+id/airdrag"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="?attr/actionBarItemBackground"
+        android:text="@string/drag"
+
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/rollingfriction"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+    <TextView
+        android:id="@+id/power"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/actionBarItemBackground"
+
+        android:text="@string/power"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rollingfriction" />
 
     <Button
-            android:id="@+id/realpowercalculate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            app:layout_constraintTop_toBottomOf="@id/realpower"
-            android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
 
-            android:layout_marginStart="30dp"
-            app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/calculate"
+        app:layout_constraintStart_toStartOf="parent"
 
-            android:text="Calculate Real Power"/>
+        app:layout_constraintTop_toBottomOf="@id/power" />
 
 
+    <EditText
+        android:id="@+id/voltage"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:background="?attr/actionBarItemBackground"
+        android:hint="@string/voltage"
+        android:text=""
+
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/rollingfriction"
+        app:layout_constraintTop_toBottomOf="@id/calculate" />
+
+    <EditText
+        android:id="@+id/current"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/actionBarItemBackground"
+        android:hint="@string/current"
+
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate" />
+
+    <TextView
+        android:id="@+id/realpower"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/actionBarItemBackground"
+
+        android:text="@string/real_power"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voltage" />
+
+    <Button
+        android:id="@+id/realpowercalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+
+        android:text="@string/calculate_real_power"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/realpower" />
 
 
     <Button
-            android:id="@+id/backToProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:id="@+id/backToProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/back_button"
 
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:text="Back"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

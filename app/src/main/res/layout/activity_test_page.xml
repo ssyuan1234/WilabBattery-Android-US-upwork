@@ -7,34 +7,34 @@
     tools:context=".TestPageActivity">
 
 
-
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Instruction String"
-
-
-        android:id="@+id/instruction" android:textSize="14sp"
+        android:id="@+id/instruction"
         style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
         android:background="?attr/actionBarItemBackground"
 
-        android:layout_marginStart="50dp"
+        android:hint="@string/instruction_string"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80dp"/>/>
+        app:layout_constraintTop_toTopOf="parent" />/>
 
     <Button
         android:id="@+id/sendInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/instruction"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="80dp"
 
-        android:layout_marginStart="50dp"
+        android:text="@string/send_instruction"
         app:layout_constraintStart_toStartOf="parent"
 
-        android:text="Send Instruction"/>
+        app:layout_constraintTop_toBottomOf="@id/instruction" />
 
 
     <Button
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="@string/back_button"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

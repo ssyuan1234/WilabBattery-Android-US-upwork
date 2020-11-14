@@ -157,25 +157,25 @@ class FragmentNetwork : Fragment() {
 
             if (inputMessage.what == 2) {
 
-                statusUpdate.text = "找到蓝牙"
+                statusUpdate.text = resources.getString(R.string.connection_status_device_found)
 
             }
 
             if (inputMessage.what == 3) {
 
-                statusUpdate.text = "链接进行中"
+                statusUpdate.text = resources.getString(R.string.connection_status_connection_ongoing)
 
             }
 
             if (inputMessage.what == 4) {
 
-                statusUpdate.text = "搜索失败，重按搜索"
+                statusUpdate.text = resources.getString(R.string.connection_status_search_again)
 
             }
 
             if (inputMessage.what == 5) {
 
-                statusUpdate.text = "链接建立，读取数据"
+                statusUpdate.text = resources.getString(R.string.connection_status_device_found)
 
             }
 
@@ -470,7 +470,7 @@ class FragmentNetwork : Fragment() {
 
        //the function of the following code is
         override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState);
+        super.onActivityCreated(savedInstanceState)
 
 
 

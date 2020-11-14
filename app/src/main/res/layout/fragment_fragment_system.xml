@@ -10,41 +10,40 @@
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-            android:text="Send Test Report"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/updateinfo"
+        android:id="@+id/updateinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/send_report_button"
 
-            android:textSize="18sp"/>
-
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="System Status"
-            android:layout_marginTop="60dp"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/editText"
-            android:textSize="30sp"
-            android:background="?attr/actionBarItemBackground"
-            android:singleLine="false"/>
-
+        android:textSize="12sp" />
 
 
     <TextView
-            android:text="Work Status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="?attr/actionBarItemBackground"
+        android:singleLine="false"
+        android:text="@string/system_status"
+        android:textSize="24sp" />
 
 
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="50dp"
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            android:id="@+id/status"
-            android:textSize="24sp"/>
+
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="120dp"
+
+        android:text="@string/alarm_status"
+        android:textSize="24sp" />
 
     <TextView
             android:text="----"
@@ -59,65 +58,70 @@
             android:id="@+id/statusReport" tools:visibility="invisible" android:textSize="24sp"
             android:visibility="visible" android:background="?attr/actionBarItemBackground"/>
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+    <TextView
+        android:id="@+id/statusupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="280dp"
-        android:text="Connection Status" android:id="@+id/statusupdate"/>
-
+        android:layout_marginTop="10dp"
+        android:text="@string/connection_status" />
 
 
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SOC（%）"
+        android:id="@+id/textview"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="wrap_content"
 
-            android:layout_marginTop="160dp"
-            android:layout_marginLeft="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
 
-            android:id="@+id/textview" android:textSize="24sp"
-            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-            android:background="?attr/actionBarItemBackground"/>
+        android:layout_marginTop="160dp"
+        android:background="?attr/actionBarItemBackground"
+        android:text="@string/soc_percent"
+        android:textSize="24sp" />
 
     <TextView
-            android:text="----"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:id="@+id/batterysoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            android:layout_marginTop="175dp"
-            android:layout_marginLeft="260dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="175dp"
 
 
-            android:id="@+id/batterysoc" tools:visibility="invisible" android:textSize="24sp" android:hint="电量"
-            android:visibility="visible" android:background="?attr/actionBarItemBackground"/>
+        android:background="?attr/actionBarItemBackground"
+        android:hint="@string/soc_percent"
+        android:text="----"
+        android:textSize="24sp"
+        android:visibility="visible"
+        tools:visibility="invisible" />
 
 
     <Button
-        android:id ="@+id/deviceConnect"
+        android:id="@+id/deviceConnect"
         android:layout_width="120dp"
         android:layout_height="120dp"
 
-        android:layout_marginTop="250dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
 
-        android:text="Unlock"
-        android:textSize="10dp"
         android:background="@drawable/round_button"
         android:padding="40dp"
-        />
+        android:text="@string/lock"
+        android:textSize="10dp" />
 
     <Button
-        android:id ="@+id/lockup"
+        android:id="@+id/lockup"
         android:layout_width="120dp"
         android:layout_height="120dp"
 
-        android:layout_marginTop="400dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="400dp"
 
-        android:text="Lock"
-        android:textSize="10dp"
         android:background="@drawable/round_button_lockup"
         android:padding="40dp"
-        />
+        android:text="@string/unlock"
+        android:textSize="10dp" />
 
 
 
